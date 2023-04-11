@@ -1,0 +1,630 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="file:///C:/Users/favicon.ico">
+    <title>Inventory</title>
+   
+
+    <!--Template based on URL below--> 
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/starter-template/">
+   
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+    
+
+    <!-- Bootstrap core CSS -->  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://bootswatch.com/5/solar/bootstrap.min.css" rel="stylesheet" type="text/css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css" integrity="sha256-3sPp8BkKUE7QyPSl6VfBByBroQbKxKG7tsusY2mhbVY=" crossorigin="anonymous" />
+
+
+    <!--  stylesheet here-->
+    <link rel="stylesheet" href="styles.css"/>
+	<style type="text/css">
+     
+	</style>
+</head>
+  
+</div>
+<!--Header ends-->   
+        
+    
+    
+    
+    
+    <input type="checkbox" id="ham-menu">
+<label for="ham-menu">
+  <div class="hide-des">
+    <span class="menu-line"></span>
+    <span class="menu-line"></span>
+    <span class="menu-line"></span>
+    <span class="menu-line"></span>
+    <span class="menu-line"></span>
+    <span class="menu-line"></span>
+  </div>
+
+</label>
+<div class="full-page-green"></div>
+<div class="ham-menu">
+  <ul class="centre-text bold-text">
+    <li> <a href="http://127.0.0.1:5500/EmployeeMain/EmpMain.html">HomePage</a> </li>
+    <li><a href="http://127.0.0.1:5500/Inventory.html">Inventory</a></li>
+    <li >My Gmail</li>
+    <li > <a href="http://127.0.0.1:5500/StatsPageFolder%20-%20Copy/StatisticsPage.html">My Statistics</a></li>
+    <li >My Pay</li>
+    <li >Contact HR</li>
+    <li >Tools and Resources</li>
+    <li >Settings</li>
+    <li>  <a href="http://127.0.0.1:5500/Login/login.html">Log Out</a></li>
+
+  </ul>
+</div>
+    
+    
+
+
+
+
+
+    <section>
+	<h1 class="text-shadow">U(universal) Motors</h1>
+	<div class="tags">
+	</div>
+    </section> 
+    
+    
+    
+  <div class="header">
+<!--Content before waves-->
+<div class="inner-header flex">
+    
+<body class="blue">
+
+  <script src="test4.js"></script>
+    
+</div>
+
+    
+    
+      <div class="container">
+            <div class="row">
+                 <div class="col-lg-10 mx-auto mb-4">
+                    <div class="section-title text-center ">
+                        <h3 class="darktxt">Find a Car</h3>
+                 </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="career-search mb-60">
+
+                        <form action="#" class="career-form mb-60">
+                            <div class="row">
+                                <div class="col-md-6 col-lg-3 my-3">
+                                    <div class="input-group position-relative">
+                                        <input type="text" class="form-control" placeholder="Year" id="keywords">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 my-3">
+                                    <div class="select-container">
+                                        <select id="makeSelect" class="custom-select">
+                                            <option selected="">Make</option>
+                                            <option value="Acura">Acura</option>
+                                            <option value="Audi">Audi</option>
+                                            <option value="BMW">BMW</option>
+                                            <option value="Buick">Buick</option>
+                                            <option value="Cadillac">Cadillac</option>
+                                            <option value="Chevrolet">Chevrolet</option>
+                                            <option value="Chrysler">Chrysler</option>
+                                            <option value="Dodge">Dodge</option>
+                                            <option value="Fiat">Fiat</option>
+                                            <option value="Ford">Ford</option>
+                                            <option value="GMC">GMC</option>
+                                            <option value="Honda">Honda</option>
+                                            <option value="Hyundai">Hyundai</option>
+                                            <option value="Infiniti">Infiniti</option>
+                                            <option value="Jeep">Jeep</option>
+                                            <option value="Kia">Kia</option>
+                                            <option value="Mazda">Mazda</option>
+                                            <option value="Mitsubishi">Mitsubishi</option>
+                                            <option value="Nissan">Nissan</option>
+                                            <option value="Tesla">Tesla</option>
+                                            <option value="Toyota">Toyota</option>
+                                            <option value="Volvo">Volvo</option>
+                                            <option value="Volkswagen">Volkswagen</option>
+                                         
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 my-3">
+                                    <div class="select-container">
+                                        <select id="modelSelect"class="custom-select">
+                                            <option selected="makeSelect"> Select Model</option>
+                                                                                   </select>                                            
+                                                                                   
+                                                                                   
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 my-3">
+                                    <button type="button" class="btn btn-lg btn-block btn-light btn-custom" id="SearchButton">
+                                        Search
+                                    </button>
+                                </div> 
+                            </div>
+                        </form>
+                                    <br>
+                        <div class="filter-result">
+                             <h2 class="darktxt">Cars on Sale</h2></p>
+
+                            
+                            
+                           
+
+								 <div class="job-box d-md-flex align-items-center justify-content-between mb-30">
+                                <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
+                                    <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" style="width: 191px; height: 123px; margin-top: 0px">
+                                        <img alt="" class="imgd" height="128" src="Images/Mustang1.jpeg" width="242">
+                                    </div>
+                                    <div class="job-content">
+                                        <h5 class="text-center text-md-left">2017 Ford Mustang GT</h5>
+                                        <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-pin mr-2"></i> Los Angeles, California 
+                                            </li>
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-money mr-2"></i> $25,940
+                                            </li>
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-time mr-2"></i>23k Miles</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="job-right my-4 flex-shrink-0">
+                                    <a href="Product%20Page(Mustang)/Mustang.html" class="btn d-block w-100 d-sm-inline-block btn-light">More Info</a>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                            
+
+                            <div class="job-box d-md-flex align-items-center justify-content-between mb-30">
+                                <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
+                                    <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" style="width: 212px; height: 123px; margin-top: 0px">
+                                    <img alt="" class="auto-style2" height="128" src="Images/Jetta1%20copy.jpg" width="280">
+                                       
+                                    </div>
+                                    <div class="job-content">
+                                        <h5 class="text-center text-md-left">2017 Volkswagen Jetta SE</h5>
+                                        <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-pin mr-2"></i> Chicago, Illinois 
+                                            </li>
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-money mr-2"></i>19,998
+                                            </li>
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-time mr-2"></i> 32k Miles
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="job-right my-4 flex-shrink-0">
+                                    <a href="Product%20Page(Mustang)/Jetta.html" class="btn d-block w-100 d-sm-inline-block btn-light">More Info</a>
+                                </div>
+                            </div>
+
+                            <div class="job-box d-md-flex align-items-center justify-content-between mb-30">
+                                <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
+                                    <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" style="width: 201px">
+                                    <img alt="" class="auto-style2" height="128" src="Images/Vovlo1%20copy.jpg"  width="280">
+
+                                       
+                                    </div>
+                                    <div class="job-content">
+                                        <h5 class="text-center text-md-left">2012 Volvo S60 T5</h5>
+                                        <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-pin mr-2"></i> Cleveland, Ohio
+                                            </li>
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-money mr-2"></i> 14,998
+                                            </li>
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-time mr-2"></i> 79K Miles
+                                            </li>
+                                        </ul>
+                                    </div> 
+                                </div>
+                                <div class="job-right my-4 flex-shrink-0">
+                                    <a href="Product%20Page(Mustang)/Volvo.html" class="btn d-block w-100 d-sm-inline-block btn-light">More Info</a>
+                                </div>
+                            </div>
+
+                            <div class="job-box d-md-flex align-items-center justify-content-between mb-30">
+                                <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
+                                    <div class="img-holder mr-md-4 mb-md-0 mb-4 mx-auto mx-md-0 d-md-none d-lg-flex" style="width: 205px">
+                                    <img alt="" class="auto-style2" height="128" src="Images/Corvette1%20copy.jpg"  width="280">
+
+                                       
+                                    </div>
+                                    <div class="job-content">
+                                        <h5 class="text-center text-md-left">2015 Chevrolet Corvette Stingray Z51</h5>
+                                        <ul class="d-md-flex flex-wrap text-capitalize ff-open-sans">
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-pin mr-2"></i> Lansing, Michigan
+                                            </li>
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-money mr-2"></i> 42,998
+                                            </li>
+                                            <li class="mr-md-4">
+                                                <i class="zmdi zmdi-time mr-2"></i> 58K Miles
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="job-right my-4 flex-shrink-0">
+                                    <a href="Product%20Page(Mustang)/Corvette.html" class="btn d-block w-100 d-sm-inline-block btn-light">More Info</a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- START Pagination -->
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination pagination-reset justify-content-center">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                                    <i class="zmdi zmdi-long-arrow-left"></i>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item d-none d-md-inline-block"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item d-none d-md-inline-block"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">...</a></li>
+                            <li class="page-item"><a class="page-link" href="#">8</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">
+                                    <i class="zmdi zmdi-long-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- END Pagination -->
+                </div>
+            </div>
+
+        </div>
+    
+    
+<!--Waves Container-->
+<div>
+<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+<defs>
+<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+</defs>
+<g class="parallax">
+<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+</g>
+</svg>
+</div>
+<!--Waves end-->
+
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    
+     <script>
+    
+    const makeSelect = document.querySelector('#makeSelect');
+    const modelSelect = document.querySelector('#modelSelect');
+    const SearchButton = document.querySelector('#SearchButton');
+  
+    makeSelect.addEventListener('change', function() {
+      const make = this.value;
+      let models = [];
+ 
+  				if (make === 'Acura') {
+   						 models = ['Integra', 'ILX', 'NSX', 'MDX'];
+ 							 }
+ 				if (make === 'Audi') {
+   						 models = ['A1', 'e-TRON', 'Q5', 'Q6'];
+ 							 }
+ 				if (make === 'BMW') {
+   						 models = ['7 Series', '8 Series', 'Z4', 'iX1'];
+ 							 }
+ 				if (make === 'Buick') {
+   						 models = ['Excelle', 'LaCrosse', 'Verano', 'Enclave'];
+ 							 }
+ 				if (make === 'Cadillac') {
+   						 models = ['ESCALADE', 'CT4', 'CT5', 'CT6'];
+ 							 }
+ 				if (make === 'Chevrolet') {
+   						 models = ['Corvette', 'Camaro', 'Malibu', 'Silverado'];
+ 							 }
+ 				if (make === 'Chrysler') {
+   						 models = ['300', 'Pacifica', 'Grand Caravan'];
+ 							 }
+ 				if (make === 'Dodge') {
+   						 models = ['Challenger', 'Durango', 'Neon', 'Charger'];
+ 							 }
+ 				if (make === 'Fiat') {
+   						 models = ['500', '500X', 'Pulse', 'Cronos'];
+ 							 }
+ 				if (make === 'Ford') {
+   						 models = ['Mustang', 'Bronco', 'Mach-E', 'F-150'];
+ 							 }
+ 					if (make === 'GMC') {
+   						 models = ['Yukon', 'Sierra', 'Savana', 'Hummer EV'];
+ 							 } 
+ 							 
+ 				if (make === 'Honda') {
+   						 models = ['Accord', 'Civic', 'Odyssey', 'Pilot'];
+ 							 }
+ 							 
+ 					if (make === 'Hyundai') {
+   						 models = ['IONIQ 5', 'Santa Fe', 'Tucson', 'Elantra'];
+ 							 }
+			 
+ 				if (make === 'Infiniti') {
+   						 models = ['Q50', 'Q60', 'QX50', 'QX80'];
+ 							 }
+ 				if (make === 'Jeep') {
+   						 models = ['Wrangler', 'Cherokee', 'Gladiator', 'Wagoneer'];
+ 							 }
+   				if (make === 'Kia') {
+   				 models = ['Ceed', 'Stinger', 'Sportage', 'Soul'];
+ 							 }
+ 				if (make === 'Mazda') {
+   						 models = ['Mazda3', 'MX-5 ', 'CX-8', 'MX-30'];
+ 							 }
+ 				if (make === 'Mitsubishi') {
+   						 models = ['Colt', 'Outlander ', 'Mirage'];
+ 							 }
+ 				if (make === 'Nissan') {
+   						 models = ['Altima', 'Z', 'Rogue', 'Pathfinder'];
+ 							 }
+ 				if (make === 'Tesla') {
+   						 models = ['Model S', 'Model X', 'Model Y', 'Model 3'];
+ 							 }
+ 				if (make === 'Toyota') {
+   						 models = ['Corolla','Supra', 'GR86', 'Tacoma'];
+ 							 }
+ 				if (make === 'Volvo') {
+   						 models = ['V60', 'S60', 'S90', 'XC90'];
+ 							 }
+ 			else if (make === 'Volkswagen') {
+   				 models = ['Golf', 'Jetta', 'Atlas', 'Tiguan'];
+ 			 }
+
+  			modelSelect.innerHTML = '<option value="">Select Model</option>';
+    for (const model of models) {
+      modelSelect.innerHTML += `<option value="${model}">${model}</option>`;
+    }
+       });
+   
+//Search button stuff
+    SearchButton.addEventListener('click', function() {
+    const make = makeSelect.value;
+    const model = modelSelect.value;
+
+    //When click search it shows you all the aviable pages
+    if (make === 'Ford' && model === 'Mustang') {
+      window.location.href = 'Product%20Page(Mustang)/Mustang.html'; 
+    }
+
+    if (make === 'Ford' && model === 'Bronco') {
+      window.location.href = 'Product%20Page(Mustang)/bronco.html'; 
+    }
+
+    if (make === 'Ford' && model === 'Mach-E') {
+      window.location.href = 'Product%20Page(Mustang)/machE.html'; 
+    }
+
+    if (make === 'Ford' && model === 'F-150') {
+      window.location.href = 'Product%20Page(Mustang)/f-150.html'; 
+    }
+
+    if (make === 'GMC' && model === 'Yukon') {
+      window.location.href = 'Product%20Page(Mustang)/yukon.html'; 
+    }
+    if (make === 'GMC' && model === 'Sierra') {
+      window.location.href = 'Product%20Page(Mustang)/Sierra.html'; 
+    }
+    if (make === 'GMC' && model === 'Savana') {
+      window.location.href = 'Product%20Page(Mustang)/savana.html'; 
+    }
+    if (make === 'GMC' && model === 'Hummer EV') {
+      window.location.href = 'Product%20Page(Mustang)/hummer.html'; 
+    }
+    if (make === 'Honda' && model === 'Accord') {
+      window.location.href = 'Product%20Page(Mustang)/Accord.html'; 
+    }
+    if (make === 'Honda' && model === 'Civic') {
+      window.location.href = 'Product%20Page(Mustang)/civic.html'; 
+    }
+    if (make === 'Honda' && model === 'Odyssey') {
+      window.location.href = 'Product%20Page(Mustang)/odyssey.html'; 
+    }
+    if (make === 'Honda' && model === 'Pilot') {
+      window.location.href = 'Product%20Page(Mustang)/pilot.html'; 
+    }
+    if (make === 'Hyundai' && model === 'IONIQ 5') {
+      window.location.href = 'Product%20Page(Mustang)/bronco.html'; 
+    }
+    if (make === 'Hyundai' && model === 'Santa Fe') {
+      window.location.href = 'Product%20Page(Mustang)/bronco.html'; 
+    }
+    if (make === 'Hyundai' && model === 'Tucson') {
+      window.location.href = 'Product%20Page(Mustang)/bronco.html'; 
+    }
+    if (make === 'Hyundai' && model === 'Elantra') {
+      window.location.href = 'Product%20Page(Mustang)/bronco.html'; 
+    }
+    if (make === 'Infiniti' && model === 'Q50') {
+      window.location.href = 'Product%20Page(Mustang)/X50.html'; 
+    }
+    if (make === 'Infiniti' && model === 'Q60') {
+      window.location.href = 'Product%20Page(Mustang)/Q60.html'; 
+    }
+    if (make === 'Infiniti' && model === 'QX50') {
+      window.location.href = 'Product%20Page(Mustang)/Qx60.html'; 
+    }
+    if (make === 'Infiniti' && model === 'QX80') {
+      window.location.href = 'Product%20Page(Mustang)/Qx80.html'; 
+    }
+    if (make === 'Jeep' && model === 'Wrangler') {
+      window.location.href = 'Product%20Page(Mustang)/Jeepwrangler.html'; 
+    }
+    if (make === 'Jeep' && model === 'Cherokee') {
+      window.location.href = 'Product%20Page(Mustang)/cherokee.html'; 
+    }
+    if (make === 'Jeep' && model === 'Gladiator') {
+      window.location.href = 'Product%20Page(Mustang)/Gladitor.html'; 
+    }
+    if (make === 'Jeep' && model === 'Wagoneer') {
+      window.location.href = 'Product%20Page(Mustang)/Wagoneer.html'; 
+    }
+    if (make === 'Kia' && model === 'Ceed') {
+      window.location.href = 'Product%20Page(Mustang)/KiaCreed.html'; 
+    }
+    if (make === 'Kia' && model === 'Stinger') {
+      window.location.href = 'Product%20Page(Mustang)/Stringer.html'; 
+    }
+    if (make === 'Kia' && model === 'Sportage') {
+      window.location.href = 'Product%20Page(Mustang)/Sportage.html'; 
+    }
+    if (make === 'Kia' && model === 'Soul') {
+      window.location.href = 'Product%20Page(Mustang)/KiaSoul.html'; 
+    }
+    if (make === 'Mazda' && model === 'Mazda3') {
+      window.location.href = 'Product%20Page(Mustang)/Mazda3.html'; 
+    }
+    if (make === 'Mazda' && model === 'MX-5') {
+      window.location.href = 'Product%20Page(Mustang)/MazdaMX-5.html'; 
+    }
+    if (make === 'Mazda' && model === 'CX-8') {
+      window.location.href = 'Product%20Page(Mustang)/Mazda CX-8.html'; 
+    }
+    if (make === 'Mazda' && model === 'MX-30') {
+      window.location.href = 'Product%20Page(Mustang)/MazdaMX-30.html'; 
+    }
+    if (make === 'Mitsubishi' && model === 'Colt') {
+      window.location.href = 'Product%20Page(Mustang)/MitsuColt.html'; 
+    }
+    if (make === 'Mitsubishi' && model === 'Outlander') {
+      window.location.href = 'Product%20Page(Mustang)/MitsuOutlander.html'; 
+    }
+
+    if (make === 'Nissan' && model === 'Altima') {
+      window.location.href = 'Product%20Page(Mustang)/NissAlt.html'; 
+    }
+
+    if (make === 'Nissan' && model === 'Rogue') {
+      window.location.href = 'Product%20Page(Mustang)/NissanRogue.html'; 
+    }
+
+    if (make === 'Nissan' && model === 'Pathfinder') {
+      window.location.href = 'Product%20Page(Mustang)/NissPath.html'; 
+    }
+    if (make === 'Nissan' && model === 'Z') {
+      window.location.href = 'Product%20Page(Mustang)/bronco.html'; 
+    }
+
+
+
+    if (make === 'Mitsubishi' && model === 'Mirage') {
+      window.location.href = 'Product%20Page(Mustang)/MitsuMirage.html'; 
+    }
+    if (make === 'Tesla' && model === 'Model S') {
+      window.location.href = 'Product%20Page(Mustang)/ModelS.html'; 
+    }
+    if (make === 'Tesla' && model === 'Model X') {
+      window.location.href = 'Product%20Page(Mustang)/ModelX.html'; 
+    }
+    if (make === 'Tesla' && model === 'Model Y') {
+      window.location.href = 'Product%20Page(Mustang)/ModelY.html'; 
+    }
+    if (make === 'Tesla' && model === 'Model 3') {
+      window.location.href = 'Product%20Page(Mustang)/Model3.html'; 
+    }
+    if (make === 'Toyota' && model === 'Corolla') {
+      window.location.href = 'Product%20Page(Mustang)/Corolla.html'; 
+    }
+    if (make === 'Toyota' && model === 'Supra') {
+      window.location.href = 'Product%20Page(Mustang)/Supra.html'; 
+    }
+    if (make === 'Toyota' && model === 'GR86') {
+      window.location.href = 'Product%20Page(Mustang)/GR86.html'; 
+    }
+    if (make === 'Toyota' && model === 'Tacoma') {
+      window.location.href = 'Product%20Page(Mustang)/Tacoma.html'; 
+    }
+    if (make === 'Volvo' && model === 'V60') {
+      window.location.href = 'Product%20Page(Mustang)/V60.html'; 
+    }
+    if (make === 'Volvo' && model === 'S60') {
+      window.location.href = 'Product%20Page(Mustang)/Volvo.html'; 
+    }
+    if (make === 'Volvo' && model === 'S90') {
+      window.location.href = 'Product%20Page(Mustang)/S90.html'; 
+    }
+    if (make === 'Volvo' && model === 'XC90') {
+      window.location.href = 'Product%20Page(Mustang)/SC90.html'; 
+    }
+    if (make === 'Volkswagen' && model === 'Golf') {
+      window.location.href = 'Product%20Page(Mustang)/Golf.html'; 
+    }
+    if (make === 'Volkswagen' && model === 'Jetta') {
+      window.location.href = 'Product%20Page(Mustang)/Jetta.html'; 
+    }
+    if (make === 'Volkswagen' && model === 'Atlas') {
+      window.location.href = 'Product%20Page(Mustang)/Atlas.html'; 
+    }
+    if (make === 'Volkswagen' && model === 'Tiguan') {
+      window.location.href = 'Product%20Page(Mustang)/Tiguan.html'; 
+    }
+    
+  });
+
+  
+
+
+
+
+
+    </script>
+
+       
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
