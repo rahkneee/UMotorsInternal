@@ -19,7 +19,7 @@ public class EmployeeRepository {
 
     public List<EmployeeData> getEmployeeData() {
         return jdbcTemplate.query(
-                "SELECT LastName, Count(dealerstats.EmployeeId) As NumSold, SUM(Sales) AS TotalSales\n" +
+                "SELECT lastname, Count(dealerstats.EmployeeId) As NumSold, SUM(Sales) AS TotalSales\n" +
                         "FROM `dealerstats` \n" +
                         "JOIN `useraccounts` ON(dealerstats.EmployeeID = useraccounts.EmployeeID)\n" +
                         "\n" + "GROUP BY dealerstats.employeeID",

@@ -13,7 +13,6 @@ CREATE TABLE `inventory` (
   PRIMARY KEY (`VIN`)
 );
 
-
 CREATE TABLE `useraccounts` (
   `EmployeeId` int NOT NULL,
   `LastName` varchar(30) DEFAULT NULL,
