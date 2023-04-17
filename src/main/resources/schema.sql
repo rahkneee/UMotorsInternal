@@ -10,6 +10,7 @@ CREATE TABLE `inventory` (
   `Miles` int DEFAULT NULL,
   `Body` varchar(30) DEFAULT NULL,
   `VIN` varchar(25) NOT NULL,
+  `TradeIn` varchar(3) DEFAULT NULL,
   PRIMARY KEY (`VIN`)
 );
 
@@ -42,3 +43,17 @@ CREATE VIEW `w_s_jan1_jan8` AS select sum(`dealerstats`.`Sales`) AS `WeeklySales
 CREATE VIEW `w_s_jan25_jan31` AS select sum(`dealerstats`.`Sales`) AS `WeeklySales`,count(`dealerstats`.`AutoSold`) AS `TotalNumOfAutoSold` from `dealerstats` where (`dealerstats`.`SalesDate` between '2023-01-25' and '2023-01-31');
 
 CREATE VIEW `w_s_jan9_jan16` AS select sum(`dealerstats`.`Sales`) AS `WeeklySales`,count(`dealerstats`.`AutoSold`) AS `TotalNumOfAutoSold` from `dealerstats` where (`dealerstats`.`SalesDate` between '2023-01-09' and '2023-01-16');
+
+CREATE VIEW `all_employee_sales` AS select `dealerstats`.`EmployeeId` AS `employeeId`,`useraccounts`.`LastName` AS `LastName`,count(`dealerstats`.`EmployeeId`) AS `NumSold`,sum(`dealerstats`.`Sales`) AS `TotalSales` from (`dealerstats` join `useraccounts` on((`dealerstats`.`EmployeeId` = `useraccounts`.`EmployeeID`))) group by `dealerstats`.`EmployeeId`;
+
+CREATE VIEW `employee_five_sales` AS select `useraccounts`.`LastName` AS `LastName`,count(`dealerstats`.`EmployeeId`) AS `NumSold`,sum(`dealerstats`.`Sales`) AS `TotalSales` from (`dealerstats` join `useraccounts` on((`dealerstats`.`EmployeeId` = `useraccounts`.`EmployeeID`))) where (`dealerstats`.`EmployeeId` = '1005');
+
+CREATE VIEW `employee_four_sales` AS select `useraccounts`.`LastName` AS `LastName`,count(`dealerstats`.`EmployeeId`) AS `NumSold`,sum(`dealerstats`.`Sales`) AS `TotalSales` from (`dealerstats` join `useraccounts` on((`dealerstats`.`EmployeeId` = `useraccounts`.`EmployeeID`))) where (`dealerstats`.`EmployeeId` = '1004');
+
+CREATE VIEW `employee_one_sales` AS select `useraccounts`.`LastName` AS `LastName`,count(`dealerstats`.`EmployeeId`) AS `NumSold`,sum(`dealerstats`.`Sales`) AS `TotalSales` from (`dealerstats` join `useraccounts` on((`dealerstats`.`EmployeeId` = `useraccounts`.`EmployeeID`))) where (`dealerstats`.`EmployeeId` = '1001');
+
+CREATE VIEW `employee_three_sales` AS select `useraccounts`.`LastName` AS `LastName`,count(`dealerstats`.`EmployeeId`) AS `NumSold`,sum(`dealerstats`.`Sales`) AS `TotalSales` from (`dealerstats` join `useraccounts` on((`dealerstats`.`EmployeeId` = `useraccounts`.`EmployeeID`))) where (`dealerstats`.`EmployeeId` = '1003');
+
+CREATE VIEW `employee_two_sales` AS select `useraccounts`.`LastName` AS `LastName`,count(`dealerstats`.`EmployeeId`) AS `NumSold`,sum(`dealerstats`.`Sales`) AS `TotalSales` from (`dealerstats` join `useraccounts` on((`dealerstats`.`EmployeeId` = `useraccounts`.`EmployeeID`))) where (`dealerstats`.`EmployeeId` = '1002');
+
+CREATE VIEW `inorder` AS select `inventory`.`Year` AS `Year`,`inventory`.`Make` AS `Make`,`inventory`.`Model` AS `Model`,`inventory`.`Color` AS `Color`,`inventory`.`Price` AS `Price`,`inventory`.`NewOrUsed` AS `NewOrUsed`,`inventory`.`SoldOrInStock` AS `SoldOrInStock`,`inventory`.`Doors` AS `Doors`,`inventory`.`Miles` AS `Miles`,`inventory`.`Body` AS `Body`,`inventory`.`VIN` AS `VIN` from `inventory` order by `inventory`.`SoldOrInStock`,`inventory`.`Year`;
