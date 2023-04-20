@@ -54,7 +54,7 @@
   <ul class="centre-text bold-text">
     <li> <a href="http://127.0.0.1:5500/EmployeeMain/EmpMain.html">HomePage</a> </li>
     <li><a href="http://127.0.0.1:5500/Inventory.html">Inventory</a></li>
-    <li >My Gmail</li>
+    <li> <a href="http://127.0.0.1:5500/Email/email.html">My Gmail</a></li>
     <li > <a href="http://127.0.0.1:5500/StatsPageFolder%20-%20Copy/StatisticsPage.html">My Statistics</a></li>
     <li >My Pay</li>
     <li >Contact HR</li>
@@ -99,7 +99,7 @@
                  </div>
                 </div>
             </div>
-
+                                        <!--Start of the search bar-->
             <div class="row">
                 <div class="col-lg-10 mx-auto">
                     <div class="career-search mb-60">
@@ -108,47 +108,24 @@
                             <div class="row">
                                 <div class="col-md-6 col-lg-3 my-3">
                                     <div class="input-group position-relative">
-                                        <input type="text" class="form-control" placeholder="Year" id="keywords">
+
+                                          <select class="form-control" id="year">
+                                              <option value="">Select A Year</option>
+                                          </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-3 my-3">
                                     <div class="select-container">
-                                        <select id="makeSelect" class="custom-select">
-                                            <option selected="">Make</option>
-                                            <option value="Acura">Acura</option>
-                                            <option value="Audi">Audi</option>
-                                            <option value="BMW">BMW</option>
-                                            <option value="Buick">Buick</option>
-                                            <option value="Cadillac">Cadillac</option>
-                                            <option value="Chevrolet">Chevrolet</option>
-                                            <option value="Chrysler">Chrysler</option>
-                                            <option value="Dodge">Dodge</option>
-                                            <option value="Fiat">Fiat</option>
-                                            <option value="Ford">Ford</option>
-                                            <option value="GMC">GMC</option>
-                                            <option value="Honda">Honda</option>
-                                            <option value="Hyundai">Hyundai</option>
-                                            <option value="Infiniti">Infiniti</option>
-                                            <option value="Jeep">Jeep</option>
-                                            <option value="Kia">Kia</option>
-                                            <option value="Mazda">Mazda</option>
-                                            <option value="Mitsubishi">Mitsubishi</option>
-                                            <option value="Nissan">Nissan</option>
-                                            <option value="Tesla">Tesla</option>
-                                            <option value="Toyota">Toyota</option>
-                                            <option value="Volvo">Volvo</option>
-                                            <option value="Volkswagen">Volkswagen</option>
-                                         
-                                        </select>
+                                                <select class="custom-select" id="make">
+                                                      <option value="">Make</option>
+                                                  </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-3 my-3">
                                     <div class="select-container">
-                                        <select id="modelSelect"class="custom-select">
-                                            <option selected="makeSelect"> Select Model</option>
-                                                                                   </select>                                            
-                                                                                   
-                                                                                   
+                                                    <select class="custom-select" id="model">
+                                                          <option value="">Select Model</option>
+                                                    </select>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-3 my-3">
@@ -164,7 +141,7 @@
 
                             
                             
-                           
+                                    <!--Start of the "Find a car Section"-->
 
 								 <div class="job-box d-md-flex align-items-center justify-content-between mb-30">
                                 <div class="job-left my-4 d-md-flex align-items-center flex-wrap">
@@ -277,7 +254,7 @@
                         </div>
                     </div>
 
-                    <!-- START Pagination -->
+                    <!-- START Pagination where you can click to different pages -->
                     <nav aria-label="Page navigation">
                         <ul class="pagination pagination-reset justify-content-center">
                             <li class="page-item disabled">
@@ -285,9 +262,9 @@
                                     <i class="zmdi zmdi-long-arrow-left"></i>
                                 </a>
                             </li>
-                            <li class="page-item"><a class="page-link" href="#">1</a></li>
-                            <li class="page-item d-none d-md-inline-block"><a class="page-link" href="#">2</a></li>
-                            <li class="page-item d-none d-md-inline-block"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="http://127.0.0.1:5500/Inventory.html">1</a></li>
+                            <li class="page-item d-none d-md-inline-block"><a class="page-link" href="http://127.0.0.1:5500/Inventory2.html">2</a></li>
+                            <li class="page-item d-none d-md-inline-block"><a class="page-link" href="http://127.0.0.1:5500/Inventory3.html">3</a></li>
                             <li class="page-item"><a class="page-link" href="#">...</a></li>
                             <li class="page-item"><a class="page-link" href="#">8</a></li>
                             <li class="page-item">
@@ -328,286 +305,214 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     
-     <script>
+    <script>
+      // Select the search button element
+      const searchButton = document.getElementById('SearchButton');
     
-    const makeSelect = document.querySelector('#makeSelect');
-    const modelSelect = document.querySelector('#modelSelect');
-    const SearchButton = document.querySelector('#SearchButton');
-  
-    makeSelect.addEventListener('change', function() {
-      const make = this.value;
-      let models = [];
- 
-  				if (make === 'Acura') {
-   						 models = ['Integra', 'ILX', 'NSX', 'MDX'];
- 							 }
- 				if (make === 'Audi') {
-   						 models = ['A1', 'e-TRON', 'Q5', 'Q6'];
- 							 }
- 				if (make === 'BMW') {
-   						 models = ['7 Series', '8 Series', 'Z4', 'iX1'];
- 							 }
- 				if (make === 'Buick') {
-   						 models = ['Excelle', 'LaCrosse', 'Verano', 'Enclave'];
- 							 }
- 				if (make === 'Cadillac') {
-   						 models = ['ESCALADE', 'CT4', 'CT5', 'CT6'];
- 							 }
- 				if (make === 'Chevrolet') {
-   						 models = ['Corvette', 'Camaro', 'Malibu', 'Silverado'];
- 							 }
- 				if (make === 'Chrysler') {
-   						 models = ['300', 'Pacifica', 'Grand Caravan'];
- 							 }
- 				if (make === 'Dodge') {
-   						 models = ['Challenger', 'Durango', 'Neon', 'Charger'];
- 							 }
- 				if (make === 'Fiat') {
-   						 models = ['500', '500X', 'Pulse', 'Cronos'];
- 							 }
- 				if (make === 'Ford') {
-   						 models = ['Mustang', 'Bronco', 'Mach-E', 'F-150'];
- 							 }
- 					if (make === 'GMC') {
-   						 models = ['Yukon', 'Sierra', 'Savana', 'Hummer EV'];
- 							 } 
- 							 
- 				if (make === 'Honda') {
-   						 models = ['Accord', 'Civic', 'Odyssey', 'Pilot'];
- 							 }
- 							 
- 					if (make === 'Hyundai') {
-   						 models = ['IONIQ 5', 'Santa Fe', 'Tucson', 'Elantra'];
- 							 }
-			 
- 				if (make === 'Infiniti') {
-   						 models = ['Q50', 'Q60', 'QX50', 'QX80'];
- 							 }
- 				if (make === 'Jeep') {
-   						 models = ['Wrangler', 'Cherokee', 'Gladiator', 'Wagoneer'];
- 							 }
-   				if (make === 'Kia') {
-   				 models = ['Ceed', 'Stinger', 'Sportage', 'Soul'];
- 							 }
- 				if (make === 'Mazda') {
-   						 models = ['Mazda3', 'MX-5 ', 'CX-8', 'MX-30'];
- 							 }
- 				if (make === 'Mitsubishi') {
-   						 models = ['Colt', 'Outlander ', 'Mirage'];
- 							 }
- 				if (make === 'Nissan') {
-   						 models = ['Altima', 'Z', 'Rogue', 'Pathfinder'];
- 							 }
- 				if (make === 'Tesla') {
-   						 models = ['Model S', 'Model X', 'Model Y', 'Model 3'];
- 							 }
- 				if (make === 'Toyota') {
-   						 models = ['Corolla','Supra', 'GR86', 'Tacoma'];
- 							 }
- 				if (make === 'Volvo') {
-   						 models = ['V60', 'S60', 'S90', 'XC90'];
- 							 }
- 			else if (make === 'Volkswagen') {
-   				 models = ['Golf', 'Jetta', 'Atlas', 'Tiguan'];
- 			 }
-
-  			modelSelect.innerHTML = '<option value="">Select Model</option>';
-    for (const model of models) {
-      modelSelect.innerHTML += `<option value="${model}">${model}</option>`;
-    }
-       });
-   
-//Search button stuff
-    SearchButton.addEventListener('click', function() {
-    const make = makeSelect.value;
-    const model = modelSelect.value;
-
-    //When click search it shows you all the aviable pages
-    if (make === 'Ford' && model === 'Mustang') {
+      // Add click event listener to the search button
+      searchButton.addEventListener('click', function() {
+        const year = document.getElementById('year').value;
+        const make = document.getElementById('make').value;
+        const model = document.getElementById('model').value;
+    
+        // Redirect to the corresponding HTML page based on the selected make and model
+        if (year== '2023' & make === 'Ford' && model === 'Mustang') {
       window.location.href = 'Product%20Page(Mustang)/Mustang.html'; 
     }
 
-    if (make === 'Ford' && model === 'Bronco') {
+    if (year== '2023' & make === 'Ford' && model === 'Bronco') {
       window.location.href = 'Product%20Page(Mustang)/bronco.html'; 
     }
 
-    if (make === 'Ford' && model === 'Mach-E') {
+    if (year== '2023' & make === 'Ford' && model === 'Mach-E') {
       window.location.href = 'Product%20Page(Mustang)/machE.html'; 
     }
 
-    if (make === 'Ford' && model === 'F-150') {
+    if (year== '2023' & make === 'Ford' && model === 'F-150') {
       window.location.href = 'Product%20Page(Mustang)/f-150.html'; 
     }
 
-    if (make === 'GMC' && model === 'Yukon') {
+    if (year== '2016' & make === 'GMC' && model === 'Yukon') {
       window.location.href = 'Product%20Page(Mustang)/yukon.html'; 
     }
-    if (make === 'GMC' && model === 'Sierra') {
+    if (year== '2020' & make === 'GMC' && model === 'Sierra') {
       window.location.href = 'Product%20Page(Mustang)/Sierra.html'; 
     }
-    if (make === 'GMC' && model === 'Savana') {
+    if (year== '2023' & make === 'GMC' && model === 'Savana') {
       window.location.href = 'Product%20Page(Mustang)/savana.html'; 
     }
-    if (make === 'GMC' && model === 'Hummer EV') {
+    if (year== '2023' & make === 'GMC' && model === 'Hummer EV') {
       window.location.href = 'Product%20Page(Mustang)/hummer.html'; 
     }
-    if (make === 'Honda' && model === 'Accord') {
+    if (year== '2023' & make === 'Honda' && model === 'Accord') {
       window.location.href = 'Product%20Page(Mustang)/Accord.html'; 
     }
-    if (make === 'Honda' && model === 'Civic') {
+    if (year== '2018' & make === 'Honda' && model === 'Civic') {
       window.location.href = 'Product%20Page(Mustang)/civic.html'; 
     }
-    if (make === 'Honda' && model === 'Odyssey') {
+    if (year== '2019' & make === 'Honda' && model === 'Odyssey') {
       window.location.href = 'Product%20Page(Mustang)/odyssey.html'; 
     }
-    if (make === 'Honda' && model === 'Pilot') {
+    if (year== '2022' & make === 'Honda' && model === 'Pilot') {
       window.location.href = 'Product%20Page(Mustang)/pilot.html'; 
     }
-    if (make === 'Hyundai' && model === 'IONIQ 5') {
+    if (year== '2019' & make === 'Hyundai' && model === 'IONIQ 5') {
       window.location.href = 'Product%20Page(Mustang)/bronco.html'; 
     }
-    if (make === 'Hyundai' && model === 'Santa Fe') {
+    if (year== '2020' & make === 'Hyundai' && model === 'Santa Fe') {
       window.location.href = 'Product%20Page(Mustang)/bronco.html'; 
     }
-    if (make === 'Hyundai' && model === 'Tucson') {
+    if (year== '2023' & make === 'Hyundai' && model === 'Tucson') {
       window.location.href = 'Product%20Page(Mustang)/bronco.html'; 
     }
-    if (make === 'Hyundai' && model === 'Elantra') {
+    if (year== '2023' & make === 'Hyundai' && model === 'Elantra') {
       window.location.href = 'Product%20Page(Mustang)/bronco.html'; 
     }
-    if (make === 'Infiniti' && model === 'Q50') {
+    if (year== '2021' & make === 'Infiniti' && model === 'Q50') {
       window.location.href = 'Product%20Page(Mustang)/X50.html'; 
     }
-    if (make === 'Infiniti' && model === 'Q60') {
+    if (year== '2022' & make === 'Infiniti' && model === 'Q60') {
       window.location.href = 'Product%20Page(Mustang)/Q60.html'; 
     }
-    if (make === 'Infiniti' && model === 'QX50') {
+    if (year== '2023' & make === 'Infiniti' && model === 'QX50') {
       window.location.href = 'Product%20Page(Mustang)/Qx60.html'; 
     }
-    if (make === 'Infiniti' && model === 'QX80') {
+    if (year== '2023' & make === 'Infiniti' && model === 'QX80') {
       window.location.href = 'Product%20Page(Mustang)/Qx80.html'; 
     }
-    if (make === 'Jeep' && model === 'Wrangler') {
+    if (year== '2023' & make === 'Jeep' && model === 'Wrangler') {
       window.location.href = 'Product%20Page(Mustang)/Jeepwrangler.html'; 
     }
-    if (make === 'Jeep' && model === 'Cherokee') {
+    if (year== '2023' & make === 'Jeep' && model === 'Cherokee') {
       window.location.href = 'Product%20Page(Mustang)/cherokee.html'; 
     }
-    if (make === 'Jeep' && model === 'Gladiator') {
+    if (year== '2022' & make === 'Jeep' && model === 'Gladiator') {
       window.location.href = 'Product%20Page(Mustang)/Gladitor.html'; 
     }
-    if (make === 'Jeep' && model === 'Wagoneer') {
+    if (year== '2023' & make === 'Jeep' && model === 'Wagoneer') {
       window.location.href = 'Product%20Page(Mustang)/Wagoneer.html'; 
     }
-    if (make === 'Kia' && model === 'Ceed') {
+    if (year== '2021' & make === 'Kia' && model === 'Ceed') {
       window.location.href = 'Product%20Page(Mustang)/KiaCreed.html'; 
     }
-    if (make === 'Kia' && model === 'Stinger') {
+    if (year== '2022' & make === 'Kia' && model === 'Stinger') {
       window.location.href = 'Product%20Page(Mustang)/Stringer.html'; 
     }
-    if (make === 'Kia' && model === 'Sportage') {
+    if (year== '2023' & make === 'Kia' && model === 'Sportage') {
       window.location.href = 'Product%20Page(Mustang)/Sportage.html'; 
     }
-    if (make === 'Kia' && model === 'Soul') {
+    if (year== '2023' & make === 'Kia' && model === 'Soul') {
       window.location.href = 'Product%20Page(Mustang)/KiaSoul.html'; 
     }
-    if (make === 'Mazda' && model === 'Mazda3') {
+    if (year== '2021' & make === 'Mazda' && model === 'Mazda3') {
       window.location.href = 'Product%20Page(Mustang)/Mazda3.html'; 
     }
-    if (make === 'Mazda' && model === 'MX-5') {
+    if (year== '2022' & make === 'Mazda' && model === 'MX-5') {
       window.location.href = 'Product%20Page(Mustang)/MazdaMX-5.html'; 
     }
-    if (make === 'Mazda' && model === 'CX-8') {
+    if (year== '2023' & make === 'Mazda' && model === 'CX-8') {
       window.location.href = 'Product%20Page(Mustang)/Mazda CX-8.html'; 
     }
-    if (make === 'Mazda' && model === 'MX-30') {
+    if (year== '2023' & make === 'Mazda' && model === 'MX-30') {
       window.location.href = 'Product%20Page(Mustang)/MazdaMX-30.html'; 
     }
-    if (make === 'Mitsubishi' && model === 'Colt') {
+    if (year== '2010' & make === 'Mitsubishi' && model === 'Lancer') {
       window.location.href = 'Product%20Page(Mustang)/MitsuColt.html'; 
     }
-    if (make === 'Mitsubishi' && model === 'Outlander') {
+    if (year== '2021' & make === 'Mitsubishi' && model === 'Outlander') {
       window.location.href = 'Product%20Page(Mustang)/MitsuOutlander.html'; 
     }
 
-    if (make === 'Nissan' && model === 'Altima') {
+    if (year== '2017' & make === 'Nissan' && model === 'Altima') {
       window.location.href = 'Product%20Page(Mustang)/NissAlt.html'; 
     }
 
-    if (make === 'Nissan' && model === 'Rogue') {
+    if (year== '2022' & make === 'Nissan' && model === 'Rogue') {
       window.location.href = 'Product%20Page(Mustang)/NissanRogue.html'; 
     }
 
-    if (make === 'Nissan' && model === 'Pathfinder') {
+    if (year== '2023' & make === 'Nissan' && model === 'Pathfinder') {
       window.location.href = 'Product%20Page(Mustang)/NissPath.html'; 
     }
-    if (make === 'Nissan' && model === 'Z') {
+    if (year== '2023' & make === 'Nissan' && model === 'Z') {
       window.location.href = 'Product%20Page(Mustang)/bronco.html'; 
     }
 
 
 
-    if (make === 'Mitsubishi' && model === 'Mirage') {
+    if (year== '2022' & make === 'Mitsubishi' && model === 'Mirage') {
       window.location.href = 'Product%20Page(Mustang)/MitsuMirage.html'; 
     }
-    if (make === 'Tesla' && model === 'Model S') {
+    if (year== '2021' & make === 'Tesla' && model === 'Model S') {
       window.location.href = 'Product%20Page(Mustang)/ModelS.html'; 
     }
-    if (make === 'Tesla' && model === 'Model X') {
+    if (year== '2022' & make === 'Tesla' && model === 'Model X') {
       window.location.href = 'Product%20Page(Mustang)/ModelX.html'; 
     }
-    if (make === 'Tesla' && model === 'Model Y') {
+    if (year== '2023' & make === 'Tesla' && model === 'Model Y') {
       window.location.href = 'Product%20Page(Mustang)/ModelY.html'; 
     }
-    if (make === 'Tesla' && model === 'Model 3') {
+    if (year== '2023' & make === 'Tesla' && model === 'Model 3') {
       window.location.href = 'Product%20Page(Mustang)/Model3.html'; 
     }
-    if (make === 'Toyota' && model === 'Corolla') {
+    if (year== '2019' & make === 'Toyota' && model === 'Corolla') {
       window.location.href = 'Product%20Page(Mustang)/Corolla.html'; 
     }
-    if (make === 'Toyota' && model === 'Supra') {
+    if (year== '2022' & make === 'Toyota' && model === 'Supra') {
       window.location.href = 'Product%20Page(Mustang)/Supra.html'; 
     }
-    if (make === 'Toyota' && model === 'GR86') {
+    if (year== '2023' & make === 'Toyota' && model === 'GR86') {
       window.location.href = 'Product%20Page(Mustang)/GR86.html'; 
     }
-    if (make === 'Toyota' && model === 'Tacoma') {
+    if (year== '2017' & make === 'Toyota' && model === 'Tacoma') {
       window.location.href = 'Product%20Page(Mustang)/Tacoma.html'; 
     }
-    if (make === 'Volvo' && model === 'V60') {
+    if (year== '2020' & make === 'Volvo' && model === 'V60') {
       window.location.href = 'Product%20Page(Mustang)/V60.html'; 
     }
-    if (make === 'Volvo' && model === 'S60') {
+    if (year== '2012' & make === 'Volvo' && model === 'S60') {
       window.location.href = 'Product%20Page(Mustang)/Volvo.html'; 
     }
-    if (make === 'Volvo' && model === 'S90') {
+    if (year== '2016' & make === 'Volvo' && model === 'S90') {
       window.location.href = 'Product%20Page(Mustang)/S90.html'; 
     }
-    if (make === 'Volvo' && model === 'XC90') {
+    if (year== '2022' & make === 'Volvo' && model === 'XC90') {
       window.location.href = 'Product%20Page(Mustang)/SC90.html'; 
     }
-    if (make === 'Volkswagen' && model === 'Golf') {
+    if (year== '2019' & make === 'Volkswagen' && model === 'Golf') {
       window.location.href = 'Product%20Page(Mustang)/Golf.html'; 
     }
-    if (make === 'Volkswagen' && model === 'Jetta') {
+    if (year== '2023' & make === 'Volkswagen' && model === 'Jetta') {
       window.location.href = 'Product%20Page(Mustang)/Jetta.html'; 
     }
-    if (make === 'Volkswagen' && model === 'Atlas') {
+    if (year== '2023' & make === 'Volkswagen' && model === 'Atlas') {
       window.location.href = 'Product%20Page(Mustang)/Atlas.html'; 
     }
-    if (make === 'Volkswagen' && model === 'Tiguan') {
+    if (year== '2018' & make === 'Volkswagen' && model === 'Tiguan') {
       window.location.href = 'Product%20Page(Mustang)/Tiguan.html'; 
     }
-    
-  });
-
-  
+      });
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
     </script>
+    
 
        
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -615,7 +520,65 @@ viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
 
+<script>
+      // Populate the year dropdown menu with the years sorted in descending order
+fetch('http://localhost:8080/api/v1/inventory')
+  .then(response => response.json())
+  .then(data => {
+    let years = new Set();
+    data.forEach(car => {
+      years.add(car.year);
+    });
+    
+    // Sort the years in descending order
+    years = Array.from(years).sort((a, b) => b - a);
 
+    years.forEach(year => {
+      $('#year').append(`<option value="${year}">${year}</option>`);
+    });
+  })
+  .catch(error => console.error(error));
+
+    
+      // Populate the make dropdown menu based on selected year
+      $('#year').change(function() {
+        let selectedYear = $(this).val();
+        $('#make').empty().append('<option value="">Make</option>');
+        $('#model').empty().append('<option value="">Model</option>');
+        fetch(`http://localhost:8080/api/v1/inventory?year=${selectedYear}`)
+          .then(response => response.json())
+          .then(data => {
+            let makes = new Set();
+            data.forEach(car => {
+              makes.add(car.make);
+            });
+            makes.forEach(make => {
+              $('#make').append(`<option value="${make}">${make}</option>`);
+            });
+          })
+          .catch(error => console.error(error));
+      });
+    
+    // Populate the model dropdown menu based on selected make
+    $('#make').change(function() {
+  let selectedYear = $('#year').val();
+  let selectedMake = $(this).val();
+  $('#model').empty().append('<option value="">Model</option>');
+  fetch(`http://localhost:8080/api/v1/inventory?year=${selectedYear}&make=${selectedMake}`)
+    .then(response => response.json())
+    .then(data => {
+      let models = new Set();
+      data.filter(car => car.make === selectedMake).forEach(car => {
+        models.add(car.model);
+      });
+      models.forEach(model => {
+        $('#model').append(`<option value="${model}">${model}</option>`);
+      });
+    })
+    .catch(error => console.error(error));
+});
+
+    </script>
 
 
 
