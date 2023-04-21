@@ -33,96 +33,18 @@
 </ul>
 </div>
 <section id="wrapper">
-               
-              <i data-show="show-side-navigation1" class="uil-bars show-side-btn"></i>
-         <!--   </a>
-          
-        </ul>
-      
-    </div>
-  </nav>
---> 
   <div class="p-4">
     <div class="welcome">
       <div class="content rounded-3 p-3">
         <h1 class="fs-3">Hello, welcome to the dashboard!</h1>        
       </div>
     </div>
-    
-    <section class="charts mt-4">
-      <div class="row">
-        <div class="col-lg-6">
-          <div class="chart-container rounded-2 p-3">
-            <h3 class="fs-6 mb-3">Car Sales</h3>
-           <body>
-              <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-
-<script>
-var xValues = ["J&F", "M&A", "M&J", "J&A", "S-D"];
-var yValues = [55, 49, 44, 24, 20]; 
-var barColors = ["red", "green","blue","orange","brown"];
-
-new Chart("myChart", {
-  type: "bar",
-  data: {
-    labels: xValues,
-    datasets: [{
-      backgroundColor: barColors,
-      data: yValues
-    }]
-  },
-  options: {
-    legend: {display: false},
-    title: {
-      display: true,
-      text: ""
-    }
-  }
-});
-</script>
-
-</body>
-
           </div>
-        </div>
+        
           
         <div class="col-lg-6">
           <div class="chart-container rounded-2 p-3">
-            <h3 class="fs-6 mb-3">Trade Ins</h3>
-     <body>         
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-
-
-<canvas id="lowerChart" style="width:100%;max-width:800px"></canvas>
-
-<script>
-var xValues = ["J&F", "M&A", "M&J", "J&A", "S-D"];
-var yValues = [78, 22, 88, 91, 67];
-var barColors = ["red", "green","blue","orange","brown"];
-
-new Chart("lowerChart", {
-  type: "bar",
-  data: {
-    labels: xValues,
-    datasets: [{
-      backgroundColor: barColors,
-      data: yValues
-    }]
-  },
-  options: {
-    legend: {display: false},
-    title: {
-      display: true,
-      text: ""
-    }
-  }
-});
-</script>
-
-</body>
-
-          </div>
+                    </div>
         </div>
       
   
@@ -134,26 +56,33 @@ new Chart("lowerChart", {
         <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
           <div class="box bg-primary p-3">
             
-            <h3>5,154</h3>
-            <p class="lead">Total number of employees</p>
+            <h3></h3>
+            <p class="lead">Sale Date</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
           <div class="box bg-danger p-3">
             
-            <h3>245</h3>
-            <p class="lead">Total number of cars in stock</p>
+            <h3></h3>
+            <p class="lead">Auto Sold</p>
           </div>
         </div>
         <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
           <div class="box bg-warning p-3">
             
-            <h3>5,154</h3>
-            <p class="lead"></p>
-          </div>
-            
+            <h3></h3>
+            <p class="lead">Sales</p>
+          </div>           
         </div> 
-  </div>
+           <div class="col-md-6 col-lg-3 mb-4 mb-lg-0">
+          <div class="box bg-primary p-3">
+            
+            <h3></h3>
+            <p class="lead">VIN</p>
+          </div>
+        </div>
+        </div>
+       
 </section>
 
 
