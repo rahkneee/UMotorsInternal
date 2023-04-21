@@ -1,6 +1,6 @@
 package com.universalmotors.Universal.Motors.repository;
 
-import com.universalmotors.Universal.Motors.model.Car;
+
 import com.universalmotors.Universal.Motors.model.EmployeeData;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -19,10 +19,8 @@ public class EmployeeRepository {
 
     public List<EmployeeData> getEmployeeData() {
         return jdbcTemplate.query(
-                "SELECT lastname, Count(dealerstats.EmployeeId) As NumSold, SUM(Sales) AS TotalSales\n" +
-                        "FROM `dealerstats` \n" +
-                        "JOIN `useraccounts` ON(dealerstats.EmployeeID = useraccounts.EmployeeID)\n" +
-                        "\n" + "GROUP BY dealerstats.employeeID",
+                "SELECT dealerstats.*, useraccounts.firstname, useraccounts.lastname\n" +
+                        "FROM dealerstats JOIN useraccounts ON (useraccounts.employeeid = dealerstats.employeeid)",
                 BeanPropertyRowMapper.newInstance(EmployeeData.class)
         );
     }

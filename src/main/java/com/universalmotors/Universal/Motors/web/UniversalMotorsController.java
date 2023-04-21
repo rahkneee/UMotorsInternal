@@ -1,11 +1,10 @@
 package com.universalmotors.Universal.Motors.web;
 
 import com.universalmotors.Universal.Motors.model.Car;
+import com.universalmotors.Universal.Motors.model.Email;
 import com.universalmotors.Universal.Motors.model.EmployeeData;
 import com.universalmotors.Universal.Motors.model.UserAccount;
-import com.universalmotors.Universal.Motors.service.impl.EmployeeServiceImpl;
-import com.universalmotors.Universal.Motors.service.impl.InventoryServiceImpl;
-import com.universalmotors.Universal.Motors.service.impl.UserAccountsServiceImpl;
+import com.universalmotors.Universal.Motors.service.impl.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,13 +23,20 @@ public class UniversalMotorsController {
 
     @Autowired
     private EmployeeServiceImpl employeeService;
-
+    @Autowired
+    private EmailServiceImpl emailService;
 
     @PostMapping("/userAccounts")
     public ResponseEntity<UserAccount> createUserAccount(@RequestBody UserAccount userAccount) {
         userAccountsService.createUserAccount(userAccount);
         return ResponseEntity.ok().body(userAccount);
     }
+    @PostMapping("/email")
+    public ResponseEntity<Email> addEmail(@RequestBody Email email) {
+        emailService.addEmail(email);
+        return ResponseEntity.ok().body(email);
+    }
+
 
     @GetMapping("/inventory")
     public List<Car> getCarsByAttributes(@RequestParam Optional<Integer> year, @RequestParam Optional<String> make, @RequestParam Optional<String> model) {
@@ -47,7 +53,6 @@ public class UniversalMotorsController {
         else {
             return inventoryService.getCarsByMake(make.get().toUpperCase());
         }
-
     }
     @GetMapping("/inventory/cars")
     public List<Car> getCarsByYear(@RequestParam int year) {
@@ -62,6 +67,7 @@ public class UniversalMotorsController {
 
 //
 //    @GetMapping("/persons/{nickname}")
+//    @CrossOrigin(origins="*")
 //    public ResponseEntity<Person> getPersonByNickname(@PathVariable(value = "nickname") String nickname)
 //            throws ResourceNotFoundException {
 //        Person person = personService.findByNickname(nickname);

@@ -36,6 +36,18 @@ CREATE TABLE `dealerstats` (
   CONSTRAINT `dealerstats_ibfk_2` FOREIGN KEY (`VIN`) REFERENCES `inventory` (`VIN`)
 );
 
+CREATE TABLE `email` (
+  `EmployeeId` int NOT NULL,
+  `Email` varchar(100) NOT NULL,
+  `TO` varchar(100) NOT NULL,
+  `FROM` varchar(100) NOT NULL,
+  `CC` varchar(100) DEFAULT NULL,
+  `Subject` varchar(100) NOT NULL,
+  `Message` varchar(255) NOT NULL,
+  PRIMARY KEY (`EmployeeId`),
+  CONSTRAINT `email_ibfk_1` FOREIGN KEY (`EmployeeId`) REFERENCES `useraccounts` (`EmployeeID`)
+  );
+
 CREATE VIEW `w_s_jan17_jan24` AS select sum(`dealerstats`.`Sales`) AS `WeeklySales`,count(`dealerstats`.`AutoSold`) AS `TotalNumOfAutoSold` from `dealerstats` where (`dealerstats`.`SalesDate` between '2023-01-17' and '2023-01-24');
 
 CREATE VIEW `w_s_jan1_jan8` AS select sum(`dealerstats`.`Sales`) AS `WeeklySales`,count(`dealerstats`.`AutoSold`) AS `TotalNumOfAutoSold` from `dealerstats` where (`dealerstats`.`SalesDate` between '2023-01-01' and '2023-01-08');

@@ -1,14 +1,11 @@
 package com.universalmotors.Universal.Motors.repository;
 
-import com.universalmotors.Universal.Motors.model.Person;
 import com.universalmotors.Universal.Motors.model.UserAccount;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
 
 @Slf4j
 @Repository
